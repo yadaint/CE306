@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรแกรมแปลงสกุลเงิน (Currency Converter)</title>
+
+    <!--  ดึงฟอนต์ Prompt จาก Google-->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="week2.css">
+</head>
+<body>
+    <div class="container">
+        <h2>currency converter</h2>
+        <p id="last-updated" class="time-text">กรุณารอการอัปเดตข้อมูลสักครู่จ้าาาา...</p>
+        
+        <div class="currency-container">
+            <select id="currency-one">
+                <option value="THB" selected>THB</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="JPY">JPY</option>
+                <option value="GBP">GBP</option>
+            </select>
+            <input type="number" id="amount-one" placeholder="0.00" min="0">
+        </div>
+
+        <div class="rate-container">
+            <div id="rate">1 THB = x.xx USD</div>
+        </div>
+
+        <div class="currency-container">
+            <select id="currency-two">
+                <option value="USD" selected>USD</option>
+                <option value="THB">THB</option>
+                <option value="EUR">EUR</option>
+                <option value="JPY">JPY</option>
+                <option value="GBP">GBP</option>
+            </select>
+            <input type="number" id="amount-two" placeholder="0.00" min="0">
+        </div>
+
+        <button id="clear-data-btn" class="btn-primary">ลบข้อมูลทั้งหมด</button>
+
+        <hr class="divider">
+
+        <div class="history-section">
+            <h3>ประวัติการแลกเปลี่ยน</h3>
+            <ul id="history-list"></ul>
+            <button id="clear-history-btn" class="btn-outline">ล้างประวัติทั้งหมด</button>
+        </div>
+    </div>
+
+    
+    <script src="week2.js"></script>
+</body>
+</html>
