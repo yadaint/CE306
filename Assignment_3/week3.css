@@ -1,0 +1,121 @@
+/* จัดหน้าเว็บรวมๆ */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #294b80;
+    margin: 0;
+    padding: 20px;
+}
+
+/* กล่องสีขาวตรงกลางจอ */
+.box-container {
+    background-color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+/* กล่องโชว์ยอดเงิน */
+.summary-box {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.text-green {
+    color: green;
+    font-weight: bold;
+}
+
+.text-red {
+    color: red;
+    font-weight: bold;
+}
+
+/* ช่องพิมพ์ข้อมูล */
+.input-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-section input, .input-section select {
+    flex: 1;
+    min-width: 130px;
+}
+
+/* หน้าตาของปุ่มกด */
+.btn-add {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-add:hover {
+    background-color: #0056b3;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* ช่องค้นหาด้านล่าง */
+.search-section {
+    margin-bottom: 15px;
+}
+
+.search-section input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+/* แถวรายการที่โชว์ทีละอัน */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 5px solid gray; /* แถบสีเทาตอนแรก */
+}
+
+/* เปลี่ยนสีแถบด้านซ้าย ถ้ารับเป็นเขียว จ่ายเป็นแดง */
+li.income-item {
+    border-left-color: green;
+}
+
+li.expense-item {
+    border-left-color: red;
+}

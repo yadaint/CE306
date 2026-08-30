@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบบัญชีรายรับ-รายจ่าย</title>
+    <!-- ดึงไฟล์ตกแต่งหน้าเว็บมาใช้ -->
+    <link rel="stylesheet" href="week3.css">
+</head>
+<body>
+
+    <div class="box-container">
+        <h1>บัญชีรายรับ-รายจ่าย</h1>
+
+        <!-- กล่องโชว์ยอดเงินรวมด้านบน -->
+        <div class="summary-box">
+            <p>รายรับรวม: <span id="total-income" class="text-green">0</span> บาท</p>
+            <p>รายจ่ายรวม: <span id="total-expense" class="text-red">0</span> บาท</p>
+            <hr>
+            <p><strong>ยอดคงเหลือ: <span id="net-balance">0</span> บาท</strong></p>
+        </div>
+
+        <!-- ช่องให้กรอกข้อมูลใหม่ -->
+        <div class="input-section">
+            
+            <!-- กลับมาใช้แบบพิมพ์ข้อความเหมือนเดิม -->
+            <input type="text" id="name-input" placeholder="ชื่อรายการ (เช่น กินข้าว)">
+
+            <input type="number" id="amount-input" placeholder="จำนวนเงิน">
+            
+            <select id="type-input">
+                <option value="รายรับ">รายรับ</option>
+                <option value="รายจ่าย">รายจ่าย</option>
+            </select>
+
+            <!-- ให้เลือกหมวดหมู่ -->
+            <select id="category-input">
+                <option value="อาหาร">อาหาร</option>
+                <option value="เดินทาง">เดินทาง</option>
+                <option value="ช้อปปิ้ง">ช้อปปิ้ง</option>
+                <option value="เงินเดือน">เงินเดือน</option>
+                <option value="อื่นๆ">อื่นๆ</option>
+            </select>
+
+            <button onclick="saveData()" class="btn-add">เพิ่มข้อมูล</button>
+        </div>
+
+        <!-- ช่องพิมพ์ค้นหารายการ -->
+        <div class="search-section">
+            <label>ค้นหารายการ: </label>
+            <input type="text" id="search-input" placeholder="พิมพ์ชื่อรายการ..." onkeyup="showData()">
+        </div>
+
+        <!-- ตรงนี้เอาไว้โชว์รายการที่เพิ่มเข้าไป -->
+        <h3>ประวัติรายการ</h3>
+        <ul id="history-list">
+            <!-- เดี๋ยวรายการจะมาโผล่ตรงนี้ -->
+        </ul>
+
+        <!-- ปุ่มกดลบข้อมูลทิ้งทั้งหมด -->
+        <button onclick="deleteAll()" class="btn-delete">ล้างข้อมูลทั้งหมด</button>
+    </div>
+
+    <!-- ดึงไฟล์โค้ดการทำงานมาใส่ไว้ล่างสุด -->
+    <script src="week3.js"></script>
+</body>
+</html>
